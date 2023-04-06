@@ -40,7 +40,7 @@ io.on("connection", (socket) => {
   playerIds.push(socket.id);
 
   // console.log(socket.id, " has connected");
-  console.log(playerIds, " on connect");
+  // console.log(playerIds, " on connect");
 
   socket.emit("assignId", socket.id);
 
@@ -126,10 +126,10 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     if (playerIds.length > 2) {
-      console.log(playerIds, " on disconnect before splice");
+      // console.log(playerIds, " on disconnect before splice");
       const idIndex = playerIds.indexOf(socket.id);
       playerIds.splice(idIndex, 1);
-      console.log(playerIds, " on disconnect after splice");
+      // console.log(playerIds, " on disconnect after splice");
     }
 
     if (playerIds.indexOf(socket.id) > -1) {
@@ -138,7 +138,7 @@ io.on("connection", (socket) => {
     }
 
     // console.log(socket.id, " has disconnected");
-    console.log(playerIds, " on disconnect");
+    // console.log(playerIds, " on disconnect");
 
     if (playerIds.length < 2) {
       playerIds = [];
