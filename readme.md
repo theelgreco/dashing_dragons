@@ -81,8 +81,7 @@ You are able to run current tests or tests you create through the predefined tes
 
 ## ‼️ Known issues
 
-- Currently if a third person attempts to connect, it kicks out the two current players. 
-- On first deployment on render, game does not run as expected.
+- On first deployment on render, game does not run as expected, may take a couple of refreshes to get going.
 
 ## Collaborators
 >[Diana](https://github.com/DianaMMartins) 
